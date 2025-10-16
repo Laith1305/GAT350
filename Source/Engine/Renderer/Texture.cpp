@@ -30,6 +30,8 @@ namespace neu {
             return false;
         }
 
+        SDL_FlipSurface(surface, SDL_FLIP_VERTICAL);
+
         // Create a GPU-side texture from the surface
         // The renderer is a friend class, so we can access m_renderer directly
         m_texture = SDL_CreateTextureFromSurface(renderer.m_renderer, surface);
